@@ -2,7 +2,7 @@
 
 # 🌐 Laboratório Virtual de Redes
 
-### IPv4 • CIDR • Máscaras de Sub-rede • Subnetting • VLSM
+### IPv4 • CIDR • Máscaras • Subnetting • VLSM • DHCP • Gateway • IPv6
 
 **Aprenda endereçamento IP com cálculos interativos e explicações passo a passo.**
 
@@ -15,6 +15,30 @@
 </div>
 
 ---
+
+
+## 🗺️ Planejamento visual de redes
+
+A evolução do laboratório inclui duas ferramentas interativas, acessíveis pelo menu **Planejamento de redes**:
+
+### Mapa visual de sub-redes (VLSM)
+
+- Informe uma rede de origem, como `192.168.10.0/24`.
+- Cadastre setores no formato `Nome; quantidade de dispositivos`, um por linha.
+- O laboratório distribui os blocos do maior para o menor, respeitando os limites de CIDR e evitando sobreposição.
+- Visualize a ocupação proporcional dos endereços, os intervalos de hosts, o broadcast, a máscara e o espaço restante.
+- Copie o planejamento em texto para usar em exercícios ou documentações.
+
+**Exemplo:** Administrativo (50) → `192.168.10.0/26`; Financeiro (25) → `192.168.10.64/27`; TI (10) → `192.168.10.96/28`.
+
+### Topologia e caminho do pacote
+
+- Informe IP de origem, IP de destino, prefixo e gateway.
+- Observe os equipamentos em um diagrama simples (computador, switch e, quando necessário, roteador).
+- Veja a decisão de entrega local via ARP ou de encaminhamento pelo gateway, com explicação passo a passo.
+- Teste cenários com computadores na mesma sub-rede ou em redes diferentes.
+
+**Importante:** são simulações conceituais. Não enviam pacotes reais, não configuram equipamentos e não substituem testes de conectividade, roteamento, VLANs ou regras de firewall.
 
 ## 📚 Sobre o projeto
 
@@ -148,3 +172,8 @@ Projeto educacional desenvolvido sob a identidade **Teclabs Info**, com foco na 
 **© 2026 Anthony Freitas · Teclabs Info. Todos os direitos reservados.**
 
 </div>
+
+
+### Navegação e limpeza de dados
+
+Cada ferramenta possui o botão **↺ Limpar campos**, que apaga seus dados de entrada e resultados sem alterar as outras ferramentas. Os menus suspensos fecham automaticamente após a escolha de uma opção, ao clicar fora deles ou ao pressionar **Esc**.
