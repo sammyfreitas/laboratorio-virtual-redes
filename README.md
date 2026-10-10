@@ -18,6 +18,16 @@
 
 
 
+## 📝 Quiz de redes — rodadas e avaliação por tentativas
+
+- A cada rodada, são sorteadas **até 10 questões**, sem repetição dentro da rodada. No filtro **Todos os níveis**, são 10 dentre as 18 disponíveis. Os filtros individuais podem ter menos de 10 questões, pois o banco atual não tem 10 em cada nível.
+- O aluno pode tentar novamente **quantas vezes precisar**. Cada tentativa incorreta é registrada, e a questão só é concluída quando a resposta correta é selecionada.
+- Após acertar, a questão é bloqueada para evitar contagens repetidas e a explicação é exibida.
+- A tela mostra questões resolvidas, tentativas, erros, percentual de aproveitamento e nota equivalente de 0 a 10.
+- **Aproveitamento = (questões acertadas ÷ total de tentativas) × 100**; **nota = aproveitamento ÷ 10**. Ex.: 10 acertos em 13 tentativas = 76,92% e nota 7,69.
+- O botão **Sortear nova rodada de 10** reinicia o placar da rodada e sorteia novamente; o filtro de nível também inicia uma nova rodada. As questões podem reaparecer em rodadas futuras.
+- A pontuação é **formativa**, não identifica alunos e não é armazenada após recarregar a página.
+
 ## 🩺 Diagnóstico IPv4 e terminal didático (v2.0 / v2.1 parcial)
 
 - **Diagnóstico de configuração:** informe IP, máscara/CIDR, gateway e DNS. O laboratório verifica sintaxe, máscara contígua, endereços de rede e broadcast, gateway fora da sub-rede e alguns endereços especiais. Cada resultado explica como corrigir o problema. O diagnóstico não mede conectividade real nem comprova funcionamento do DNS. Prefixos `/31` e `/32` têm usos especiais e não recebem a regra comum de hosts.
