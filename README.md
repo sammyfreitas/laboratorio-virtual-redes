@@ -17,6 +17,39 @@
 ---
 
 
+
+## 🩺 Diagnóstico IPv4 e terminal didático (v2.0 / v2.1 parcial)
+
+- **Diagnóstico de configuração:** informe IP, máscara/CIDR, gateway e DNS. O laboratório verifica sintaxe, máscara contígua, endereços de rede e broadcast, gateway fora da sub-rede e alguns endereços especiais. Cada resultado explica como corrigir o problema. O diagnóstico não mede conectividade real nem comprova funcionamento do DNS. Prefixos `/31` e `/32` têm usos especiais e não recebem a regra comum de hosts.
+- **Terminal simulado Windows/Linux:** `ipconfig`, `ipconfig /all`, `ip addr`, `ping DESTINO`, `tracert DESTINO`, `traceroute DESTINO`, `nslookup NOME` e `arp -a`. Os resultados são **fictícios e educativos**. Nenhum comando é executado no computador e nenhum pacote é transmitido.
+- **Enviar para outra ferramenta:** a análise IP/CIDR, o simulador de gateway e o mapa VLSM enviam uma configuração ao diagnóstico. O diagnóstico permite continuar no terminal. Confira o gateway sugerido antes de aplicar em redes reais.
+
+### Exemplo de diagnóstico
+
+- IP: `192.168.1.50`
+- Máscara: `/24`
+- Gateway: `192.168.2.1`
+- DNS: `1.1.1.1`
+
+O gateway informado está fora da rede local `192.168.1.0/24`, portanto não é um próximo salto diretamente alcançável na configuração convencional.
+
+### Status do roteiro
+
+| Versão | Entrega | Estado |
+| --- | --- | --- |
+| 2.0 | Diagnóstico de IP/máscara/gateway/DNS | Implementado (análise estática) |
+| 2.0 | Compartilhamento de dados entre calculadoras | Parcial: IP/CIDR, gateway, VLSM visual → diagnóstico → terminal |
+| 2.0 | Erros com explicações e sugestões | Implementado nos novos recursos |
+| 2.1 | Terminal Windows/Linux simulado | Implementado |
+| 2.1 | Missões de suporte progressivas | Pendente |
+| 2.1 | Pontuação e feedback das missões | Pendente |
+| 2.2 | Montador interativo de topologias | Pendente; existe visualizador de topologia e caminho |
+| 2.2 | Salvar/carregar planejamentos | Pendente |
+| 2.2 | Exportação de inventário e documentação | Pendente; há cópia textual do VLSM |
+| 2.3 | Navegação completa por teclado | Pendente de auditoria e ajustes |
+| 2.3 | Modo projetor | Pendente |
+| 2.3 | Histórico local e retomada | Pendente |
+
 ## 🗺️ Planejamento visual de redes
 
 A evolução do laboratório inclui duas ferramentas interativas, acessíveis pelo menu **Planejamento de redes**:
