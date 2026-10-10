@@ -1,0 +1,150 @@
+<div align="center">
+
+# 🌐 Laboratório Virtual de Redes
+
+### IPv4 • CIDR • Máscaras de Sub-rede • Subnetting • VLSM
+
+**Aprenda endereçamento IP com cálculos interativos e explicações passo a passo.**
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black) ![Educação](https://img.shields.io/badge/Projeto-Educacional-2563EB) ![Status](https://img.shields.io/badge/Status-Em%20evolu%C3%A7%C3%A3o-22A06B)
+
+**Teclabs Info · Desenvolvimento: Anthony Freitas**
+
+[LinkedIn](https://www.linkedin.com/in/tony-s-freitas/) · [GitHub Teclabs Info](https://github.com/TeclabsInfo) · [Portfólio](https://sammyfreitas.github.io/portfolioSite/) · [Contato](mailto:tonysdefreitas@gmail.com)
+
+</div>
+
+---
+
+## 📚 Sobre o projeto
+
+O **Laboratório Virtual de Redes** é uma ferramenta educacional interativa desenvolvida para apoiar o ensino e a aprendizagem de **endereçamento IPv4, máscaras de sub-rede e planejamento de redes**.
+
+O projeto surgiu da prática docente: em vez de apenas mostrar o resultado de uma conta, o laboratório ajuda o estudante a compreender **de onde vêm os números**, como os bits formam a máscara e como determinar a quantidade de endereços de uma sub-rede.
+
+Foi pensado para uso em aulas presenciais, estudos individuais, demonstrações projetadas e preparação para atividades em simuladores de redes, como o Cisco Packet Tracer.
+
+## 🧮 Funcionalidades
+
+| Ferramenta | O que faz |
+|---|---|
+| **Máscara → Hosts** | Recebe uma máscara IPv4, identifica o CIDR e calcula os endereços totais e utilizáveis. |
+| **Hosts → Máscara** | Encontra a menor sub-rede convencional que atende à quantidade solicitada de hosts. |
+| **IP + CIDR** | Calcula endereço de rede, broadcast, intervalo de hosts e máscara. |
+| **Subnetting** | Auxilia na divisão de um bloco em sub-redes menores. |
+| **VLSM** | Planeja sub-redes com tamanhos diferentes conforme as necessidades dos setores. |
+| **Comparador de IPs** | Verifica se dois endereços pertencem à mesma sub-rede. |
+| **Binário ↔ Decimal** | Demonstra a conversão entre bases numéricas usada no endereçamento IPv4. |
+
+### 💻 Terminal explicativo
+
+As ferramentas incluem explicações em formato de **terminal**, com etapas de cálculo e representações binárias. A tabela de potências de 2 é apresentada em ordem decrescente, de **2¹⁶ a 2⁰**, para acompanhar o raciocínio utilizado em aula.
+
+Ao informar uma máscara inválida, o laboratório explica a regra dos **bits 1 consecutivos, seguidos por bits 0**. A representação binária ajuda a localizar o erro; após tentativas incorretas, são apresentados exemplos dos valores possíveis em um octeto de máscara: **0, 128, 192, 224, 240, 248, 252, 254 e 255**.
+
+> **Atenção:** esses valores não podem ser combinados em qualquer ordem. Uma máscara válida deve manter os bits `1` contínuos a partir da esquerda.
+
+## 🔎 Exemplos de uso
+
+**Exemplo 1 — Máscara para quantidade de hosts**
+
+```text
+Necessidade:       1.500 hosts
+CIDR:              /21
+Máscara:           255.255.248.0
+Endereços totais:  2.048
+Hosts utilizáveis: 2.046
+```
+
+**Exemplo 2 — Análise de IP e CIDR**
+
+```text
+Entrada:           192.168.100.20/29
+Máscara:           255.255.255.248
+Endereço de rede:  192.168.100.16
+Primeiro host:     192.168.100.17
+Último host:      192.168.100.22
+Broadcast:         192.168.100.23
+Hosts utilizáveis: 6
+```
+
+**Exemplo 3 — Conversão de máscara**
+
+```text
+Máscara decimal: 255.255.255.0
+Máscara binária: 11111111.11111111.11111111.00000000
+CIDR:            /24
+```
+
+## 🚀 Como executar
+
+Não é necessário instalar Node.js, frameworks ou bibliotecas.
+
+1. Baixe ou clone o repositório.
+2. Abra o arquivo **`index.html`** em um navegador moderno.
+3. Escolha a calculadora, preencha os campos e consulte o resultado.
+4. Abra o terminal explicativo para acompanhar a resolução.
+
+```bash
+git clone https://github.com/SEU-USUARIO/laboratorio-virtual-redes.git
+cd laboratorio-virtual-redes
+```
+
+> Substitua `SEU-USUARIO` pelo proprietário real do repositório após a publicação.
+
+## 🌍 Publicação no GitHub Pages
+
+Como o projeto é estático, pode ser hospedado gratuitamente no GitHub Pages:
+
+1. No repositório, abra **Settings → Pages**.
+2. Em **Build and deployment**, selecione **Deploy from a branch**.
+3. Selecione a branch **main** e a pasta **/(root)**.
+4. Salve e aguarde a publicação.
+
+O endereço normalmente seguirá o formato `https://SEU-USUARIO.github.io/laboratorio-virtual-redes/`.
+
+## 🎓 Proposta pedagógica
+
+O laboratório foi concebido como **recurso de apoio ao aprendizado**, e não apenas como uma calculadora de respostas. Entre os objetivos estão:
+
+- Relacionar endereço IPv4, máscara e notação CIDR.
+- Interpretar os bits de rede e de host.
+- Compreender as potências de 2 e a conversão binária.
+- Calcular capacidade, rede, broadcast e intervalo de hosts.
+- Planejar divisões de redes com subnetting e VLSM.
+- Preparar os alunos para a configuração prática de dispositivos.
+
+**Nota técnica:** a regra `2ⁿ − 2` é utilizada para sub-redes IPv4 convencionais. Os prefixos `/31` e `/32` exigem tratamento específico.
+
+## 🛠️ Tecnologias
+
+- **HTML5** — estrutura e acessibilidade semântica.
+- **CSS3** — layout responsivo e temas claro/escuro.
+- **JavaScript** — cálculos, validações e interatividade no navegador.
+
+O projeto não exige backend nem banco de dados para executar suas calculadoras.
+
+## 🧭 Evoluções planejadas
+
+- Simulações didáticas de gateway e DHCP.
+- Ferramentas introdutórias para IPv6.
+- Exercícios com correção e feedback explicativo.
+- Recursos visuais adicionais para planejamento de redes.
+
+Esses itens são **possibilidades futuras**, não funcionalidades já disponíveis nesta versão.
+
+## 👨‍💻 Autoria
+
+**Anthony Freitas** — Desenvolvedor de Software e Professor
+
+Projeto educacional desenvolvido sob a identidade **Teclabs Info**, com foco na aplicação prática da tecnologia ao ensino.
+
+[LinkedIn](https://www.linkedin.com/in/tony-s-freitas/) · [GitHub](https://github.com/TeclabsInfo) · [Portfólio](https://sammyfreitas.github.io/portfolioSite/)
+
+---
+
+<div align="center">
+
+**© 2026 Anthony Freitas · Teclabs Info. Todos os direitos reservados.**
+
+</div>
